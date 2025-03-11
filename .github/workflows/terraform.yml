@@ -91,3 +91,4 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/"maroonvillage-terraform-feature-1"' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false
+      working-directory: terraform
