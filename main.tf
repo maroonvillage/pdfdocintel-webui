@@ -17,6 +17,10 @@ terraform {
 
 provider "aws" {
   region = var.region
+  assume_role {
+    role_arn = "arn:aws:iam::686255962220:role/pdfdocintel-terraform-webui-provision-role"
+  }
+  
 }
 
 resource "aws_instance" "react_app" {
